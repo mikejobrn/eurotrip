@@ -1,0 +1,76 @@
+/* Layout da apresentação: palco, HUD, capa, baralho e encerramento. */
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--mar); font-family: Rubik, system-ui, sans-serif; }
+body.reveal-viewport { background: var(--mar); }
+.palco { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden; background: var(--mar); }
+.reveal { position: fixed !important; inset: 0; pointer-events: none; background: transparent; z-index: 200; }
+.reveal .slides { display: none; }
+.reveal .progress { color: var(--laranja); height: 6px; }
+
+.mapa, .camada, #rastro-cv { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.mapa { background: var(--mar); }
+.mapa canvas { display: block; }
+#fogos-cv { position: absolute; left: 0; top: 0; z-index: 40; pointer-events: none; }
+.mapa-novo { z-index: 1; }
+.luz { display: none; }
+#rastro-cv { z-index: 2; pointer-events: none; }
+#cena { z-index: 3; }
+
+/* pinos e elementos presos: a posição vem do palco.js, em transform */
+.pino, .preso, .veic-pos { position: absolute; left: 0; top: 0; }
+.preso { transform-origin: 0 0; z-index: 12; }
+.pino { z-index: 10; }
+.veic-pos { z-index: 20; transform-origin: 50% 50%; }
+.veiculo { position: relative; }
+.veiculo .corpo { width: 100%; display: block; }
+#cena.afastado .pin { transform: scale(.65); }
+#cena.afastado .pin .nome { display: none; }
+#cena.sem-nome-bv .pino.bv .nome { display: none; }
+
+.elenco { display: flex; gap: 0; }
+.elenco .cabeca { margin-right: -22px; }
+
+/* HUD */
+.hud-sup-esq, .hud-sup-dir { position: absolute; top: 36px; z-index: 60; }
+.hud-sup-esq { left: 48px; transform-origin: 0 0; transition: transform .7s var(--suave); }
+.hud-sup-dir { right: 48px; }
+.hud-bloco { background: var(--creme-claro); border-radius: 16px; box-shadow: var(--sombra); padding: 14px 24px; height: 124px; box-sizing: border-box; }
+.relogio .linha { display: flex; gap: 22px; font: 500 34px Rubik, sans-serif; }
+.relogio.rapido .fita { transition: none; }
+.relogio .cidade { font-size: 44px; font-weight: 700; line-height: 1.15; margin-top: 4px; white-space: nowrap; }
+.data.virou { animation: pulo .5s var(--suave); }
+@keyframes pulo { 40% { transform: translateY(-10px) scale(1.12); color: var(--laranja); } }
+.contador { min-width: 280px; text-align: right; position: relative; }
+.contador .rotulo { font-size: 22px; font-weight: 400; }
+.contador .valor { font: 500 46px Rubik, sans-serif; display: flex; justify-content: flex-end; gap: 10px; margin-top: 4px; line-height: 1.1; }
+.contador .chips { position: absolute; right: 0; top: 136px; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.chip-valor { background: var(--laranja); color: #fff; font: 500 30px Rubik, sans-serif; padding: 8px 18px; border-radius: 10px; box-shadow: var(--sombra); width: max-content; max-width: 620px; }
+.chip-valor .orig { font-weight: 400; opacity: .85; font-size: 24px; }
+.chip-valor small { display: block; font-size: 18px; font-weight: 300; }
+.chip-valor.entra { animation: pop .4s cubic-bezier(.34, 1.56, .64, 1) both; }
+.chip-valor.sai { animation: some .4s ease-in both; }
+.chips-centro { position: absolute; top: 64px; left: 0; z-index: 61; }
+.hud-legenda { position: absolute; left: 0; right: 0; bottom: 44px; display: flex; justify-content: center; z-index: 60; pointer-events: none; }
+.legenda { background: var(--creme-claro); border-radius: 16px; box-shadow: var(--sombra); font-size: 42px; font-weight: 600; padding: 12px 32px; max-width: 1500px; }
+
+/* baralho */
+.deck { position: absolute; left: 900px; top: 150px; width: 1000px; height: 800px; z-index: 30; }
+.deck.sem-t .card, .deck.sem-t .poleiro { transition: none !important; }
+.elenco-card { position: absolute; left: 0; top: -44px; z-index: 60; }
+.poleiro { position: absolute; left: 0; top: 0; transition: transform .6s var(--suave); }
+
+/* capa */
+.capa-tela { position: absolute; inset: 0; z-index: 100; background: var(--creme); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; color: var(--marrom); text-align: center; }
+.faixa { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: var(--laranja); }
+.titulo-capa { font-size: 144px; font-weight: 800; line-height: 1; color: var(--laranja); }
+.subtitulo { font-size: 38px; }
+.dica { font-size: 26px; color: var(--ferrugem); margin-top: 16px; }
+.elenco-capa { margin-top: 26px; }
+
+/* encerramento */
+.final { position: absolute; left: 80px; top: 170px; width: 700px; background: var(--creme-claro); border-radius: 16px; box-shadow: var(--sombra); padding: 40px 44px; z-index: 70; box-sizing: border-box; }
+.final .titulo { font-size: 64px; font-weight: 800; color: var(--laranja); }
+.final .elenco { margin: 24px 0; min-height: 96px; }
+.final .rotulo { font-size: 26px; }
+.final .total { font: 600 84px Rubik, sans-serif; font-variant-numeric: tabular-nums; }
+.final .total small { font-size: 44px; margin-right: 8px; }
+.final .nota { font-size: 20px; font-weight: 300; margin-top: 16px; }
