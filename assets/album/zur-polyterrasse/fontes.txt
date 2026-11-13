@@ -1,0 +1,5 @@
+0.jpg  https://ethz.ch/en/campus/development/construction-projects/mm-projekt/_jcr_content/par/slideshow/images/item1.imageformat.slideshow.1360031299.jpg
+1.jpg  https://www.zuerich.com/sites/default/files/styles/1920_1152_focal_scale_crop/public/image/2025/web_zuerich_polyterrasse_1280x960px_27990.jpg?h=2025-01-06T15:09:49+01:00
+2.jpg  https://www.photohound.co/images/1041331l.jpg
+3.jpg  https://www.urbidermis.com/recursos/imagenes_galeria/20071105-Switzerland-Zurich-Polyterrasse-COB-ROP-Equipo-Urbidermis-06-x1000.jpg
+4.jpg  https://www.urbidermis.com/recursos/imagenes_galeria/20080201-Switzerland-Zurich-Polyterrasse-COB-ROP-Pstarch-01-x1000.jpg
