@@ -1,0 +1,5 @@
+0.jpg  https://images.shakespearesglobe.com/uploads/2020/10/Globe-Theatre-Performances.jpg?resize=1600
+1.jpg  https://www.travelandleisure.com/thmb/XPzzap45S6ooNIDdzsDReyRuzw8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/globe-theatre-london-SHAKESPEARELIVE0320-99785495844942d19595dc45cb0efdbc.jpg
+2.jpg  https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_4:3,w_3840,g_auto/f_auto/q_auto/v1/gc-v1/london-pass/2024_Globe_exterior_cos0qq?_a=BAVAZGDX0
+3.jpg  https://atarnotes.com/wordpress/wp-content/uploads/2017/05/globe-stage.jpg
+4.jpg  https://www.estrelatour.com/wp-content/uploads/2018/05/Shakespeares.Globe_.teatro.jpg
