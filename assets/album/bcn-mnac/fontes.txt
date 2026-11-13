@@ -1,0 +1,5 @@
+0.jpg  https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1600,h_1067/https://1000-days-europe.de/wp-content/uploads/2024/06/A7400329-Verbessert-RR.jpg
+1.jpg  https://barcelonahacks.com/wp-content/uploads/2025/05/mnac-museum-barcelona-cover.jpg
+2.jpg  http://photos.wikimapia.org/p/00/05/42/37/12_full.jpg
+3.jpg  https://content.arquitecturaydiseno.es/medio/2026/03/10/palau-nacional-y-sede-del-mnac-barcelona_e3ad2103_260310173301_1280x794.webp
+4.jpg  https://images.mnstatic.com/41/1f/411f40bcadae1608f4bd4fdbf1eb83cd.jpg
