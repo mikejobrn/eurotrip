@@ -1,0 +1,40 @@
+/* Álbum de fotos: páginas de 1920 × 1080 em grade, sem nada sobreposto. */
+html, body, body.reveal-viewport { margin: 0; height: 100%; background: var(--creme); font-family: Rubik, system-ui, sans-serif; color: var(--marrom); }
+.reveal .slides { text-align: left; }
+.reveal .slides > section { padding: 0; width: 1920px; height: 1080px; }
+.reveal .progress { color: var(--laranja); height: 6px; }
+.reveal .controls { color: var(--laranja); }
+.reveal .slide-number { background: var(--marrom); font: 400 18px Rubik, sans-serif; }
+.pg { position: relative; width: 1920px; height: 1080px; box-sizing: border-box; overflow: hidden; background: var(--creme); }
+figure { margin: 0; overflow: hidden; border-radius: 16px; background: var(--areia); box-shadow: var(--sombra-leve); min-width: 0; min-height: 0; }
+figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* página de lugar: foto grande, texto ao lado e quatro fotos embaixo */
+.lugar { display: grid; grid-template-columns: 1160px 1fr; grid-template-rows: 640px 348px; gap: 20px; padding: 36px 40px; }
+.grande { grid-area: 1 / 1; }
+.texto { grid-area: 1 / 2; background: var(--creme-claro); border-radius: 16px; box-shadow: var(--sombra-leve); padding: 32px 36px; display: flex; flex-direction: column; gap: 18px; overflow: hidden; }
+.quando { font-size: 26px; font-weight: 500; color: var(--ferrugem); }
+.texto h2 { margin: 0; font: 800 52px/1.08 Archivo, sans-serif; color: var(--laranja); }
+.texto p { margin: 0; font-size: 30px; line-height: 1.32; font-weight: 400; }
+.menores { grid-area: 2 / 1 / 2 / 3; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; min-height: 0; }
+
+/* página de cidade: mapa da rota e nome */
+.cidade-pg { display: grid; grid-template-columns: 1100px 1fr; gap: 40px; padding: 36px 40px; align-items: center; }
+.mapa-rota { width: 1100px; height: 1008px; background: var(--mar); border-radius: 16px; box-shadow: var(--sombra); }
+.terra { fill: var(--terra); stroke: var(--fronteira); stroke-width: 1; }
+.rota { fill: none; stroke: var(--laranja); stroke-width: 5; stroke-dasharray: 14 10; }
+.pino-antes { fill: var(--creme-claro); stroke: var(--marrom); stroke-width: 3; }
+.pino-atual { fill: var(--laranja); stroke: #fff; stroke-width: 5; }
+.cidade-texto { display: flex; flex-direction: column; gap: 20px; }
+.titulo-cidade { font: 800 104px/1 Archivo, sans-serif; color: var(--laranja); }
+.periodo { font-size: 46px; font-weight: 500; }
+.quantos { font-size: 32px; color: var(--ferrugem); }
+.elenco { display: flex; flex-wrap: wrap; gap: 10px; }
+.reveal .cabeca img { margin: 0; }
+
+/* capa e fim */
+.capa { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; text-align: center; }
+.faixa { position: absolute; left: 0; right: 0; top: 0; height: 28px; background: var(--laranja); }
+.titulo-capa { font-size: 144px; font-weight: 800; line-height: 1; color: var(--laranja); }
+.subtitulo { font-size: 42px; }
+.dica { font-size: 26px; color: var(--ferrugem); }
